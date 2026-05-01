@@ -42,15 +42,21 @@ function ConfirmationContent() {
 
         <QRCode value={`${name} | ${code} | ${tribe}`} size={150} />
 
-            <div className="button-group">
-           <button className="btn download" onClick={downloadImage}>
-                Download Ticket
-                  </button>
+        <div className="button-group">
+          <button className="btn download" onClick={downloadImage}>
+            Download Ticket
+          </button>
 
-              <button className="btn home" onClick={() => router.push("/")}>
-                    Go Home
-                   </button>
-               </div> 
+          <button
+            className="btn home"
+            onClick={() => router.push("/")}
+          >
+            Go Home
+          </button>
+        </div>
+
+      </div>
+    </div>
   );
 }
 
