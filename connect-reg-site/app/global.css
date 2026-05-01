@@ -343,3 +343,8 @@ body {
 .btn:hover {
   opacity: 0.85;
 } 
+.logo {
+  display: block;
+  margin: 0 auto;   /* 👈 centers horizontally */
+  width: 120px;     /* adjust size if needed */
+} 
