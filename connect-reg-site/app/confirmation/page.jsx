@@ -3,24 +3,38 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import QRCode from "react-qr-code";
 import html2canvas from "html2canvas";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function Confirmation() {
   const params = useSearchParams();
   const router = useRouter();
-  const cardRef = useRef();
+  const cardRef = useRef(null);
 
-  const name = params.get("name");
-  const email = params.get("email");
-  const gender = params.get("gender");
-  const tribe = params.get("tribe");
-  const code = params.get("code");
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration / prerender issues
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <p>Loading...</p>;
+  }
+
+  // Safely get params AFTER mount
+  const name = params.get("name") || "Guest";
+  const email = params.get("email") || "N/A";
+  const gender = params.get("gender") || "N/A";
+  const tribe = params.get("tribe") || "N/A";
+  const code = params.get("code") || "N/A";
 
   const downloadImage = async () => {
+    if (!cardRef.current) return;
+
     const canvas = await html2canvas(cardRef.current);
     const link = document.createElement("a");
     link.download = `${name}-ticket.png`;
-    link.href = canvas.toDataURL();
+    link.href = canvas.toDataURL("image/png");
     link.click();
   };
 
@@ -28,7 +42,7 @@ export default function Confirmation() {
     <div className="confirm-wrapper">
       <div className="confirm-card" ref={cardRef}>
 
-        <h2>Registration Successful!</h2>
+        <h2>Registration Successful! 🎉</h2>
         <p>Your details have been received</p>
 
         <div className="confirm-details">
