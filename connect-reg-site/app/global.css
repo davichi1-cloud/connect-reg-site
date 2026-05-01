@@ -263,3 +263,33 @@ body {
     width: 90%;
   }
 } 
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn.download {
+  background: #0ea5e9;
+  color: white;
+}
+
+.btn.home {
+  background: #e5e7eb;
+  color: #111;
+}
+
+.btn:hover {
+  opacity: 0.85;
+} 
