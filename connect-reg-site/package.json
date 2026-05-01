@@ -1,0 +1,29 @@
+{
+  "name": "connect-registration",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@supabase/supabase-js": "^2.105.1",
+    "chart.js": "^4.5.1",
+    "email-js": "^2.0.3",
+    "emailjs-com": "^3.2.0",
+    "file-saver": "^2.0.5",
+    "firebase": "^12.12.1",
+    "html-to-image": "^1.11.13",
+    "html2canvas": "^1.4.1",
+    "next": "latest",
+    "qrcode": "^1.5.4",
+    "qrcode.react": "^4.2.0",
+    "react": "latest",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "latest",
+    "react-qr-code": "^2.0.21",
+    "xlsx": "^0.18.5"
+  }
+}

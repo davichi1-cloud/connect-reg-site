@@ -1,0 +1,265 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #eef7f1;
+  display: flex;
+  justify-content: center;
+  color: #eef7f1;
+  margin: 0;
+}
+
+/* ============================= */
+/* MAIN CONTAINER (SINGLE COLUMN) */
+/* ============================= */
+.main-container {
+  width: 100%;
+  max-width: 600px;
+  padding-top: 5px;
+}
+
+/* ============================= */
+/* LEFT PANEL (TOP SECTION) */
+/* ============================= */
+.left-panel {
+  background: #ddf5e6;
+  border: 1.5px solid #d8f3dc;
+  padding: 20px 35px 35px 35px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  color: #1b4332;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 8px;
+  display: block;
+  mix-blend-mode: multiply; /* remove white effect */
+}
+
+.left-panel h1 {
+  font-size: 30px;
+  color: #064e3b;
+  font-weight: 800;
+  margin: 5px 0 6px 0;
+}
+
+.theme {
+  color: #2d6a4f;
+  margin: 0;
+}
+
+.desc {
+  color: #344e41;
+  margin-top: 5px;
+}
+
+.line {
+  width: 50px;
+  height: 4px;
+  background: #52b788;
+  margin: 15px 0;
+  border-radius: 10px;
+} 
+
+
+.quote {
+  font-style: italic;
+  margin: 12px 0;
+  color: #6c757d;
+}
+
+
+
+/* ============================= */
+/* FORM CARD */
+/* ============================= */
+.right-panel {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.right-panel h2 {
+  color: #1b5e20;
+  margin-bottom: 5px;
+}
+
+.sub {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+.right-panel input,
+.right-panel select,
+.right-panel textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+  background: #fafafa;
+}
+
+.right-panel input:focus,
+.right-panel select:focus,
+.right-panel textarea:focus {
+  border-color: #16a34a;
+  outline: none;
+  background: white;
+}
+
+/* BIGGER EXPECTATION BOX */
+.expectation-box {
+  height: 130px;
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.right-panel button {
+  
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #2b2b2b, #000000); /* 🔥 dark gradient */
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+} 
+
+
+
+.right-panel button:hover {
+ 
+  background: linear-gradient(180deg, #3a3a3a, #111111);
+  transform: translateY(-1px);
+} 
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================= */
+/* CONFIRMATION PAGE */
+/* ============================= */
+.confirm-wrapper {
+  min-height: 100vh;
+  background: #eef7f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-card {
+  background: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.confirm-card h2 {
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+.confirm-card p {
+  color: #555;
+}
+
+/* DETAILS */
+.confirm-details {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.confirm-details p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* QR */
+.confirm-card svg {
+  margin-top: 20px;
+}
+
+/* BUTTON GROUP */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* DOWNLOAD BUTTON */
+.download {
+  background: #16a34a;
+  color: white;
+}
+
+.download:hover {
+  background: #15803d;
+}
+
+/* HOME BUTTON */
+.home {
+  background: #111;
+  color: white;
+}
+
+.home:hover {
+  background: #333;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .left-panel h1 {
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .confirm-card {
+    width: 90%;
+  }
+} 
