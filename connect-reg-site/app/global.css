@@ -346,5 +346,5 @@ body {
 .logo {
   display: block;
   margin: 0 auto;   /* 👈 centers horizontally */
-  width: 120px;     /* adjust size if needed */
+  width: 300px;     /* adjust size if needed */
 } 
