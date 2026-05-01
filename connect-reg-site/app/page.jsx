@@ -49,7 +49,7 @@ export default function Home() {
     try {
       // ✅ FETCH WITH RESPONSE
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbxtvp1LNr01WsfRJ_2-5SPAKK2Oc9Z5FDgTMMfBwQCB9ArushdMphsLgsrhVVh_9Pto/exec",
+        NEXT_PUBLIC_GOOGLE_SCRIPT_URL,
         {
           method: "POST",
           headers: {
@@ -70,15 +70,15 @@ try {
 
       // ✅ EMAILJS (UNCHANGED SETTINGS)
       await emailjs.send(
-        "service_apgdelq",
-        "template_c8ep9is",
+        NEXT_PUBLIC_EMAILJS_SERVICE,
+       NEXT_PUBLIC_EMAILJS_TEMPLATE ,
         {
           name: form.name,
           email: form.email,
           tribe,
           code,
         },
-        "2NT4c-lb1M2YRPYUV"
+        NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       // SAVE EMAIL
