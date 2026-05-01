@@ -49,7 +49,7 @@ export default function Home() {
     try {
       // ✅ FETCH WITH RESPONSE
       const res = await fetch(
-        NEXT_PUBLIC_GOOGLE_SCRIPT_URL,
+        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL,
         {
           method: "POST",
           headers: {
@@ -70,15 +70,15 @@ try {
 
       // ✅ EMAILJS (UNCHANGED SETTINGS)
       await emailjs.send(
-        NEXT_PUBLIC_EMAILJS_SERVICE,
-       NEXT_PUBLIC_EMAILJS_TEMPLATE ,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE ,
         {
           name: form.name,
           email: form.email,
           tribe,
           code,
         },
-        NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       // SAVE EMAIL
