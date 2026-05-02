@@ -105,8 +105,8 @@ try {
       {/* LEFT PANEL */}
       <div className="left-panel">
         <img src="/logo.jpg" className="logo" alt="logo" />
-        <p className="theme">RETREAT THEME</p>
-        <h1>Ministers and Workers Retreat</h1>
+        <p className="theme">Ministers and Workers Retreat 2026</p>
+        <h1>THE CALL</h1>
         <p className="quote">
           “But they that wait upon the Lord shall renew their strength...”
         </p>
